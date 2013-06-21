@@ -13,16 +13,11 @@ It turned out that after read_timeout interval passed, Nginx would call that scr
 
 To demonstrate the problem I wrote super simple php script:
 
-```php
-
+```
 <?php
-
 error_log('script run');
-
 sleep(10);
-
 ?>
-
 ```
 
 and in this case your proxy_read_timeout should be less that 10 seconds. In the error log you will see 2 entries instead of one.

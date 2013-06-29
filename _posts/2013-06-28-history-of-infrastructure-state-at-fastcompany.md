@@ -32,7 +32,7 @@ We were CTO'sless couple month and then Matt Mankins joined us as new CTO. Remem
 
 It's been a big mindset change coming from dedicated servers to the cloud. The idea of easily starting machines when you need  and stopping them you don't with one click of the button ( or even in fully automated way with autoscaling ) sounded great but we needed a way to reliably clone servers. Fortunately you can solve this prolbem easily (not without it's own consequences) in AWS by creating server images - AMI's. 
 
-Anyways, there we were - migration under the belt, running in the cloud! I didn't mention one thing about AMI's - those are byte copies, which means it copies everything you have on the box - configs, releases, passwords etc. It's not always ideal to do it this way, since some parts of the machine meant to by dynamic ( releases is just one example ). Usually you have different machines roles, i.e. different services installed on them ( web server, db server, caching server etc ). You have multiple options to support those conditions:
+Anyways, there we were - migration under the belt, running in the cloud! I didn't mention one thing about AMI's - those are byte copies, which means it copies everything you have on the box - configs, releases, passwords etc. It's not always ideal to do it this way, since some parts of the machine meant to be dynamic ( releases is just one example ). Usually you have different machines roles, i.e. different services installed on them ( web server, db server, caching server etc ). You have multiple options to support those conditions:
 
 * build different AMIs for each role
 

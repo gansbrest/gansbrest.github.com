@@ -42,3 +42,4 @@ Anyways, there we were - migration under the belt, running in the cloud! I didn'
 
 In the next article I'll write about our experience with AWS at FastCompany and will go into some details about our bootstrap process. Stay tuned.
 
+_UPDATE:_ [Read next - provision machines with AWS](/infrastructure/2013/07/02/provision-machines-with-aws---custom-bootsrapper/)

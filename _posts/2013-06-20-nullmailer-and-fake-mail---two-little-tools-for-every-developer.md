@@ -31,7 +31,7 @@ and then restart nullmailer
 
 That's about it, at this point you should have Nullmailer forwarding mail to your local smtp port. Read on to find out how to capture outgoing emails on that port.
 
-> Tip: Sometimes it could be useful to purge nulmailer queue, that could be the case when you machine was running for a while and a bunch of mail got queued. After you connect Fakemail - nullmailer will try to deliver those. If you don't want that - just delete those messages from `/var/spool/nullmailer/queue/` ( Debian location ).
+> Tip: Sometimes it could be useful to purge nullmailer queue, that could be the case when you machine was running for a while and a bunch of mails got queued. After you connect Fakemail - nullmailer will try to deliver those. If you don't want that - just delete those messages from `/var/spool/nullmailer/queue/` ( Debian location ).
 
 ### Fakemail
 

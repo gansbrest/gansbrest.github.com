@@ -86,3 +86,5 @@ Even thought this *"build all into AMI"* approach may seem good at first I found
 Those are just some points on top of my head, I'm sure you can come up with your own list, or start arguing with me about specifics. The point is - you can use this approach and we still do, but I think there are better tools out there created specifically to address problems stated above.
 
 One of such tools called [Chef](http://www.opscode.com/chef/) and we decided to give it a try. In the next posts I will be writing about our transition to Chef. Read on if you are interested.
+
+> Next post: [Provision with Chef - baby steps (installation and initial configuration)](/infrastructure/2013/07/17/provision-with-chef---baby-steps/)

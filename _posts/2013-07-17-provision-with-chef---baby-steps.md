@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Provision with Chef - baby steps"
+title: "Provision with Chef - baby steps (installation and initial configuration)"
 description: ""
 category: infrastructure
 tags: [chef]

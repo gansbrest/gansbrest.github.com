@@ -108,3 +108,5 @@ And every team member has their own knife.local.rb version:
 At this point we have working chef repo layout which we can actually use! Remember that cookbooks folder is for community books and it's controlled by librarian-chef.
 
 Next posts will explain our bootstrap process, which gives us ability to start and configure machines from AWS UI or using knife.
+
+> Continue reading [Provision and Bootstrap AWS instances with Chef](/infrastructure/2013/08/23/provision-and-bootstrap-aws-instances-with-chef/).

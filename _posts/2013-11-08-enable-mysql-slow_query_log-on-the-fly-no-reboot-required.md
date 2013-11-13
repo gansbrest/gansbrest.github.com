@@ -47,6 +47,8 @@ I always forget how to do this, so finally decided to write it down (I'm talking
         mysql> flush logs;
         Query OK, 0 rows affected (0.01 sec)
 
+    **Update**: If you are runing Perocona server, you may want to do `set global log_slow_verbosity = full;` to get additional info for query analysis. Here is [more detailed post](http://www.mysqlperformanceblog.com/2011/12/29/identifying-the-load-with-the-help-of-pt-query-digest-and-percona-server/) about it.
+
     At this point your log file should start growing and getting data. Make sure you disable it after a while (depends on the workload), so you don't run out of space if there are too many queries that fit into you time `long_query_time` span. Plus it will put more load on the server.
 
     To disable on the fly just run:

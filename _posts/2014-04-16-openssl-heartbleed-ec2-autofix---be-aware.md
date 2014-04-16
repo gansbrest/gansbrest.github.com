@@ -29,6 +29,8 @@ You can also check out Amazon response to Heartbleed related question on one of 
 
 Ok, autoupdates sound good and that could (*or should?*) be treated as a GOOD feature. Unfortunately it can break your app if you missed it. Here is how:
 
-Imagine you replaced your CI box which prepares builds and got new openssl library, then new build happens and compiles against new version which you then roll to production boxes ( which you didn't replace ) and your app suddenly stop working.. This is just one example, I'm sure you will find more.
+Imagine you replaced your CI box which prepares builds and got new openssl library, then new build happens and compiles against new version which you then roll to production boxes ( which you didn't replace ) and your app suddenly stop working.. 
+
+Or even simpler than that - you start new boxes (maybe because of traffic spike) and those come up broken, because you built your nodejs app aginst OpenSSL 1.0.1e 11 Feb 2013 and on your new boxes you get OpenSSL 1.0.1g-fips 7 Apr 2014. Tadaaa. Hope you wont spend couple hours debugging that..
 
 Anyways - the takeaway here is that you need to monitor those **critical** updates. And don't be too puzzled one day if you see something new on your backed AMI like I did with this openssl update :) 

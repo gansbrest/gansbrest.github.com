@@ -70,6 +70,8 @@ Keep reading if you need to create dynamic Name tag with auto increment for ever
 
 > I'll just outline the idea, feel free to ping me if you need to see the implementation.
 
+**Update**: Since multiple people asked me for the code sample - I decided to put it [here](https://github.com/gansbrest/aws-autoscale-dynamic-tagging). Be ready to adjust to your own needs. Enjoy!
+
 Remember we have SNS topic with Email subscriber? Now we need to add HTTP(S) one, so we can create a script which will get the message, parse out the body and get InstanceId and Action. In addition to that, every instances started by AutoScale has `aws:autoscaling:groupName` tag, so you can use that as base for your dynamic tagging (or you may add more tags for your AutoScale groups with `as-create-or-update-tags` as you see a fit).
 
 Here the logic outline which worked for us: SNS -> HTTP -> simple Nodejs app -> check Action and get instance ID -> Get Instance Tags, particularly aws:autoscaling:groupName value -> issue API call through nodejs SDK to get all instances that match that prefix -> sort those, get latest number, increment by one -> tag instance with newly generated Name tag.

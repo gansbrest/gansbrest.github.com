@@ -3,7 +3,8 @@ layout: post
 title: "Secure data bag items with chef solo"
 description: ""
 category: infrastructure
-tags: []
+tags: [chef]
+popular: true
 ---
 {% include JB/setup %}
 

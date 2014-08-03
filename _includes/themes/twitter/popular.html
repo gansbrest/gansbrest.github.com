@@ -1,0 +1,8 @@
+<h4>Some popular ones</h4>
+<ul class="popular-posts homepage">
+  {% for post in site.posts %}
+    {% if post.popular %}
+    <li><a href="{{ BASE_PATH }}{{ post.url }}">{{ post.title }}</a> <span>({{ post.date | date_to_string }})</span></li>
+    {% endif %}
+  {% endfor %}
+</ul>

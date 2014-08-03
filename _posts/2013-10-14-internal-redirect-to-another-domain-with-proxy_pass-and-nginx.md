@@ -4,6 +4,7 @@ title: "Internal redirect to another domain with proxy_pass and Nginx"
 description: ""
 category: infrastructure
 tags: [nginx]
+popular: true
 ---
 {% include JB/setup %}
 

@@ -4,6 +4,7 @@ title: "Story behind X-Forwarded-For and X-Real-IP headers"
 description: ""
 category: infrastructure
 tags: [header, nginx, aws]
+popular: true
 ---
 {% include JB/setup %}
 

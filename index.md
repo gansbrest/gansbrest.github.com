@@ -6,8 +6,12 @@ type: front
 
 {% include JB/setup %}
 
-<ul class="posts">
+<ul class="posts homepage">
   {% for post in site.posts %}
     <li><a href="{{ BASE_PATH }}{{ post.url }}">{{ post.title }}</a> <span>({{ post.date | date_to_string }})</span></li>
   {% endfor %}
 </ul>
+
+
+{% include themes/twitter/popular.html %}
+{% include themes/twitter/books.html %}

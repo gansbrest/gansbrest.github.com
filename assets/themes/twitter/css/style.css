@@ -88,3 +88,12 @@
 #avatar {
   padding-bottom: 15px;
 }
+
+.show-more {
+  cursor: pointer;
+  margin-left: 25px;
+}
+
+.book-item {
+  padding-top: 15px;
+}

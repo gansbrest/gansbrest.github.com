@@ -68,41 +68,6 @@
   margin-bottom: 10px;
 }
 
-blockquote {
-  display: block;
-  /*border:1px #dfdfdf solid;*/
-  background-color:white;
-  font-size: 20px;
-  padding: 10px 60px;
-  width: 350px;
-  text-align: center;
-  border-left: none;
-  color: #444444;
-}
-
-/* Quote Mark Styles */
-blockquote:before, blockquote:after {
-  color: #5a7c87;
-  display: block;
-  font-size: 500%;
-  width: 50px;
-}
-
-/* Left Quote */
-blockquote:before {
-  content: open-quote;
-  height: 0;
-  margin-left: -0.55em;
-}
-
-/* Right Quote */
-blockquote:after {
-  content: close-quote;
-  height: 50px;
-  margin-top: -50px;
-  margin-left: 350px;
-}
-
 #home-quote {
   padding-top: 45px;
 }

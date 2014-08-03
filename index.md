@@ -1,6 +1,7 @@
 ---
 layout: page
-title: 
+title: Sergey Khaladzinski (gansbrest) tech blog 
+kind: front
 ---
 
 <div class="row-fluid" id="avatar">

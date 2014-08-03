@@ -97,3 +97,7 @@
 .book-item {
   padding-top: 15px;
 }
+
+.front .page-header {
+  display: none;
+}

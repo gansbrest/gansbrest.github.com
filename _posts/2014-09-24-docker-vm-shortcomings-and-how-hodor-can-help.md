@@ -2,6 +2,7 @@
 layout: post
 title: "Docker VM shortcomings and how Hodor can help"
 description: ""
+visible: 0
 category: infrastructure 
 tags: [docker, vm, hodor]
 ---

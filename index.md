@@ -24,7 +24,9 @@ kind: front
 
 <ul class="posts homepage">
   {% for post in site.posts %}
+    {% if post.visible != 0  %}
     <li><a href="{{ BASE_PATH }}{{ post.url }}">{{ post.title }}</a> <span>({{ post.date | date_to_string }})</span></li>
+    {% endif %}
   {% endfor %}
 </ul>
 

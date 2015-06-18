@@ -33,7 +33,7 @@ Now lets go ahead and install both tools. Just follow instructions on docker sit
 
 ### And now we go
 
-At this point I assume Docker and Hodor were installed and works properly. Let's build docker container with environment required by our app. Yes, we still need to do it, but in the future we just download and use pre-built docker image.
+At this point I assume Docker and Hodor were installed and function properly. Let's build docker container with environment required by our app. Yes, we still need to do it, but in the future we just download and use pre-built docker image.
 
 To save us some time I already created a repo with Dockerfile and app configs - [https://github.com/gansbrest/dockerfiles/tree/master/php/nginx-fpm-5.3](https://github.com/gansbrest/dockerfiles/tree/master/php/nginx-fpm-5.3)
 

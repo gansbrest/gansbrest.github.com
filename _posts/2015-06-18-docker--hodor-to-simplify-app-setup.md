@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Docker + Hodor for simple and reliable app setup"
+title: "Docker + Hodor for simple and reliable dev setup"
 description: ""
 category: infrastructure
 tags: [docker, hodor]

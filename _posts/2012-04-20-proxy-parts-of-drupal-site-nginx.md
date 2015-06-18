@@ -13,17 +13,15 @@ The idea is that you can tear your old Drupal 5? apart and eventually switch to 
 
 The solution to this problem will require couple core patches for bootstrap.inc:
 
-1. 
-[https://gist.github.com/gansbrest/7b8c5138bfcb48d4192e](https://gist.github.com/gansbrest/7b8c5138bfcb48d4192e)
+1. [https://gist.github.com/gansbrest/7b8c5138bfcb48d4192e](https://gist.github.com/gansbrest/7b8c5138bfcb48d4192e)
 
-This patch allows us to set HTTP_HOST_PROXY header in Nginx so Drupal could pick specific folder from /sites (multisite) directory.
+  This patch allows us to set HTTP_HOST_PROXY header in Nginx so Drupal could pick specific folder from /sites (multisite) directory.
 
-For example /mba section could use settings.php file from sites/d6/.fastcompany.com folder.
+  For example /mba section could use settings.php file from sites/d6/.fastcompany.com folder.
 
-2. 
-[https://gist.github.com/gansbrest/586265cdefac9e9674e7](https://gist.github.com/gansbrest/586265cdefac9e9674e7)
+2. [https://gist.github.com/gansbrest/586265cdefac9e9674e7](https://gist.github.com/gansbrest/586265cdefac9e9674e7)
 
-We need this second patch to alter $base_path variable based on HTTP_X_SCRIPT_NAME passed from Nginx, so all internal drupal functions could use our /mba prefix. Keeping the prefix is the number one thing to remember when doing proxy redirects, otherwise you will loose the prefix and will be redirected back to your old Drupal 5 install after form submit operations.
+  We need this second patch to alter $base_path variable based on HTTP_X_SCRIPT_NAME passed from Nginx, so all internal drupal functions could use our /mba prefix. Keeping the prefix is the number one thing to remember when doing proxy redirects, otherwise you will loose the prefix and will be redirected back to your old Drupal 5 install after form submit operations.
 
 Those two patches should apply to Pressflow 6.23
 

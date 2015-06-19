@@ -11,7 +11,7 @@ tags: [docker, hodor]
 
 Here is real world scenario: You have this project you are working on, it requires php 5.3 ( yeah, old I know :) ) in fpm mode + xdebug + nginx and maybe something else (database?). You spent couple days configuring all that stuff on your workstation and everything works.. until something happens. Maybe your hardrive dies, maybe you just upgraded OS version and it installed new packages that broke the setup, or maybe your workstation is not around and you have couple hours you could really use to work on your project, but thoughts about configuring everything on some other workstation makes you sick. Yeah, we all been there...
 
-> Wait, there is must be a better way!
+> Wait, there must be a better way!
 
 ![Better way](/assets/posts/better_way.gif "Better way!")
 

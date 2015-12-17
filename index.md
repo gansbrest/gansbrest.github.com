@@ -13,6 +13,7 @@ kind: front
     <p>Feel free to gmail me at gansbrest if you have any questions.</p>
     <p><a href="https://twitter.com/gansbrest" class="twitter-follow-button" data-show-count="false">Follow @gansbrest</a>
        <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
+    <a style="padding-left: 10px; top: -6px; position: relative;" href="https://www.codementor.io/gansbrest?utm_source=github&utm_medium=button&utm_term=gansbrest&utm_campaign=github"><img src="https://cdn.codementor.io/badges/contact_me_github.svg" alt="Contact me on Codementor" style="max-width:100%" /></a>
     </p>
   </div>
 </div>

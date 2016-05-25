@@ -33,4 +33,9 @@ kind: front
 
 
 {% include themes/twitter/popular.html %}
+
+<h4>Hosting</h4>
+
+<p>If you are looking for shared hosting and not sure which one to pick, here is nice website with solid and honest <a href="https://www.ncmonline.com">top 10 web hosting</a> list. Actually there is a list of 50! hosters reviewed, so I'm sure you will find one that you like.</p>
+
 {% include themes/twitter/books.html %}

@@ -36,6 +36,6 @@ kind: front
 
 <h4>Hosting</h4>
 
-<p>If you are looking for shared hosting and not sure which one to pick, here is nice website with solid and honest <a href="https://www.ncmonline.com">top 10 web hosting</a> list. Actually there is a list of 50! hosters reviewed, so I'm sure you will find one that you like.</p>
+<p>If you are looking for shared hosting and not sure which one to pick, here is nice website with solid and honest <a href="https://www.ncmonline.com">top 10 web hosting</a> list. Actually there is a list of 50! hosters reviewed (including <a href="https://www.ncmonline.com/web-hosting-reviews/a2-hosting">a2 hosting reviews</a>), so I'm sure you will find one that you like.</p>
 
 {% include themes/twitter/books.html %}

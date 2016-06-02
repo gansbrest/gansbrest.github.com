@@ -40,18 +40,18 @@ As you can see both entries have `SET INSERT_ID=2490` and separated by a day. Wh
 
 Then I started googling around, asking people on IRC and eventually discovered couple interesting links:
 
-- (http://dev.mysql.com/doc/refman/5.7/en/innodb-auto-increment-handling.html#innodb-auto-increment-initialization)[http://dev.mysql.com/doc/refman/5.7/en/innodb-auto-increment-handling.html#innodb-auto-increment-initialization]
-- (Be Careful With MySQL's auto_increment. How We Ended Up Losing Data)[http://desmart.com/blog/be-careful-with-mysqls-auto-increment-how-we-ended-up-losing-data]
+- [http://dev.mysql.com/doc/refman/5.7/en/innodb-auto-increment-handling.html#innodb-auto-increment-initialization](http://dev.mysql.com/doc/refman/5.7/en/innodb-auto-increment-handling.html#innodb-auto-increment-initialization)
+- [Be Careful With MySQL's auto_increment. How We Ended Up Losing Data](http://desmart.com/blog/be-careful-with-mysqls-auto-increment-how-we-ended-up-losing-data)
 
-If you are to lazy to read, let me sum up it for your. Basically when you use InnoDB engine it store auto_increment counter in memory and it gets erased every time server restarts.
+Let me sum up it for you (as I know you are too lazy to read anyways). Basically when you use InnoDB engine, it stores auto_increment counter in memory and it gets erased/reset every time MySQL server restarts.
 
-What happens after restart is on the next UPDATE/INSERT query InnoDB would execute command similar to this one `SELECT MAX(ai_col) FROM t FOR UPDATE; + 1` to re-populate auto_increment key.
+What happens after restart is on the next UPDATE/INSERT query InnoDB would execute command similar to this one `SELECT MAX(ai_col) FROM t FOR UPDATE; + 1` to re-populate auto_increment counter.
 
 In our case we had two queries in the application going after each other:
 
     db_query('DELETE FROM {shipping_labels} WHERE order_id = %d', $order_id);
     db_query('INSERT INTO {shipping_labels} (order_id) VALUES (%d)', $order_id);
 
-First we delete and then we insert, so after delete our MAX(ai_col) values was set to 2489 and then InnoDB generated "new" key 2490 which was in use previously.
+First we delete and then we insert, so after delete our MAX(ai_col) values was set to 2489 and then InnoDB generated "new" key 2489 + 1 = 2490 which was in use previously.
 
-**Bottom line** - if your application relies on the assumption that auto_increment key should never be repeated, you may need to generate id in the application, or use some triggers or MyISAM table to repopulate auto_increment values after Mysql server restart. Otherwise you may lose faith one day...
+**Bottom line** - if your application relies on the assumption that auto_increment key could never be repeated, you may need to generate id in the application, or use some triggers or MyISAM table to repopulate auto_increment values after MySQL server restart. Otherwise you may lose faith in technology one day...

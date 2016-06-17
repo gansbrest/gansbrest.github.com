@@ -56,3 +56,9 @@ There are couple other important things though: `set_real_ip_from` (set addresse
 Lets talk about second one. Since Nginx (whith real_ip module) provides a way to extract client IP from X-Forwarded-For it's common to see `real_ip_header` set to X-Forwarded-For, but if you won't enable `real_ip_recursive`, you will get rightmost IP inetead of lefmost.. Here is super useful [ServerFault post](http://serverfault.com/questions/314574/nginx-real-ip-header-and-x-forwarded-for-seems-wrong/414166#414166) describing the problem and solution.
 
 If you are lazy to read, I'll summarize - in order to protect yourself from IP spoof, and get **REAL CLIENT IP** (Morpheus: How do you define 'real'?) you need to enable `real_ip_recursive` and set known proxies using `set_real_ip_from`. Nginx will remove IPs matching known proxies and then use rightmost IP which should be the IP you are looking for!
+
+---
+
+#### Looking for hosting?
+
+If you are looking for shared hosting and not sure which one to choose, ncmOnline provides the list of [fastest web hosting](https://www.ncmonline.com/fastest-web-hosting) companies. Most popular choice so far seem to be offering from A2 (full review: [a2 hosting reviews](https://www.ncmonline.com/web-hosting-reviews/a2-hosting)).

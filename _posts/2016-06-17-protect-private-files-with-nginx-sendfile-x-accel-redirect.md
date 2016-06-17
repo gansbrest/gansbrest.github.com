@@ -35,18 +35,14 @@ The idea here is pretty simple. Here is [official doc](https://www.nginx.com/res
 
 * Next in Nginx we create new location block, where we rewrite urls to `/original_imgs` to some back end script:
 
-
-        ```
         location ~ /original_imgs/ {
           rewrite /original_imgs/(.+) /scripts/meter.php?params=$1;
         }
-        ```
 
 * Inside of our `meter.php` script we check if the key is correct, store access info (in Redis for example), throw statsd (or Datadog) metric and if everything looks good - return X-Accel-Redirect header with original image location.
 
     Here is some pseudocode:
 
-        ```php
         // Check the key
 
         // Store access info
@@ -55,18 +51,15 @@ The idea here is pretty simple. Here is [official doc](https://www.nginx.com/res
 
         header('Content-type: image/jpeg');
         header("X-Accel-Redirect: /unprotected_originals/awesome_pic.jpg");
-        ```
 
     Please note that Content-type header might be necessary, otherwise Nginx may guess your Content-type incorrectly. The other option is to remove Content-type from response headers and leave it to Nginx to decide.
 
 
 * Final step is to create internal location in nginx that will be serving protected files ( `/unprotected_originals` in our example ) to the clients.
 
-        ```
         location ~ /unprotected_originals {
           internal;
         }
-        ```
 
     It's important to note here, that this example is super simple. In reality `/unprotected_originals` location may use aliases or event point to another server/service.
 

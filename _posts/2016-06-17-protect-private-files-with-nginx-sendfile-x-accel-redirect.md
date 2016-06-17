@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Secure way to serve files with Nginx Sendfile (X-Accel-Redirect)"
+title: "Secure way to serve protected files with Nginx Sendfile (X-Accel-Redirect)"
 description: ""
 category: 
 tags: [nginx]

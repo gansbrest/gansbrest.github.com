@@ -1,4 +1,5 @@
 ---
+redirect_from: "/2013/06/20/nullmailer-and-fake-mail---two-little-tools-for-every-developer/"
 layout: post
 title: "Nullmailer and Fakemail - two little tools for every developer"
 description: ""

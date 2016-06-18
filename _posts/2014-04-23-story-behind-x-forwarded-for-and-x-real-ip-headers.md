@@ -57,6 +57,12 @@ Lets talk about second one. Since Nginx (whith real_ip module) provides a way to
 
 If you are lazy to read, I'll summarize - in order to protect yourself from IP spoof, and get **REAL CLIENT IP** (Morpheus: How do you define 'real'?) you need to enable `real_ip_recursive` and set known proxies using `set_real_ip_from`. Nginx will remove IPs matching known proxies and then use rightmost IP which should be the IP you are looking for!
 
+#### Related posts
+
+* [Secure way to serve protected files with Nginx Sendfile (X-Accel-Redirect)](/2016/06/17/protect-private-files-with-nginx-sendfile-x-accel-redirect/)
+* [Internal redirect to another domain with proxy_pass and Nginx](/infrastructure/2013/10/14/internal-redirect-to-another-domain-with-proxy_pass-and-nginx/)
+* [Use Nginx to proxy files from remote location using X-Accel-Redirect](/infrastructure/2013/09/18/use-nginx-to-proxy-files-from-remote-location-using-x-accel-redirect/)
+
 ---
 
 #### Looking for hosting?

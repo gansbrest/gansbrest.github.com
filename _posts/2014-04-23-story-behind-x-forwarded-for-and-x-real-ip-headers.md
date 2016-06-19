@@ -10,7 +10,7 @@ popular: true
 
 > This was suppose to be 10 minutes fix.. 
 
-Or so I thought. If you read my blog you probably know that for the most part I'm doing operations stuff for [FastCompany](http://www.fastcompany.com). That means sometimes I deal with little tricky problems like the one I'm going to talk about today.
+Or so I thought. If you read my blog you probably know that for the most part I'm doing operations stuff for FastCompany. That means sometimes I deal with little tricky problems like the one I'm going to talk about today.
 
 ### CDN, HEADERS and IPs
 

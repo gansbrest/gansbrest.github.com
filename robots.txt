@@ -2,4 +2,4 @@
 layout: null
 permalink: robots.txt
 ---
-Disallow: /what-next
+Disallow: /what-next/
